@@ -1,0 +1,18 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{
+  /* Central theme tokens (R G B). Change palette here only. */
+  --primary:44 62 80; --primary-foreground:255 255 255;
+  --secondary:232 244 248; --secondary-foreground:51 51 51;
+  --accent:212 163 115; --accent-foreground:255 255 255;
+  --background:252 252 252; --foreground:51 51 51;
+  --muted:240 240 240; --muted-foreground:100 100 100; --border:220 220 220;
+  --font-serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --font-sans:"Avenir Next","Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{@apply bg-background text-foreground font-sans antialiased}
+h1,h2,h3{@apply font-serif tracking-tight}
+:focus-visible{outline:2px solid rgb(var(--accent));outline-offset:3px}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.rise{animation:rise .7s ease-out both}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
